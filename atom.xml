@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>hopchen`博客</title>
   
-  
+  <subtitle>生活明朗，万物可爱</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2023/04/08/hello-world/"/>
-    <id>http://example.com/2023/04/08/hello-world/</id>
+    <link href="http://example.com/posts/4a17b156.html"/>
+    <id>http://example.com/posts/4a17b156.html</id>
     <published>2023-04-08T05:54:07.147Z</published>
     <updated>2023-04-08T05:54:07.147Z</updated>
     
@@ -37,9 +37,30 @@
   </entry>
   
   <entry>
+    <title>Druid连接池</title>
+    <link href="http://example.com/posts/1fac5770.html"/>
+    <id>http://example.com/posts/1fac5770.html</id>
+    <published>2021-09-29T15:28:42.000Z</published>
+    <updated>2021-09-29T15:46:29.402Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Druid连接池"><a href="#Druid连接池" class="headerlink" title="Druid连接池"></a>Druid连接池</h3><ul><li><p>在程序初始化时，预先创建指定数量的数据库连接对象存储在池中。当需要连接数据库时，从连接池中取出现有连接；使用完毕后，也不会进行关闭，而是放回池中，实现复用</p></li><li><p>引用druid.1.15.jar文件</p></li><li><p>创建database.properties配置文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">driver=com.mysql.jdbc.Driver</span><br><span class="line">url=jdbc:mysql://localhost:3306/myemployees?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span><br><span class="line">username=root</span><br><span class="line">password=341224cqy201020</span><br><span class="line">#初始化连接数量</span><br><span class="line">initialSize=10</span><br><span class="line">#最多新建到50个</span><br><span class="line">maxActive=50</span><br><span class="line">#最小空闲连接</span><br><span class="line">minIdle=5</span><br><span class="line">#没有拿到连接等待时间，以毫秒为单位</span><br><span class="line">maxWait=5000创建连接实例</span><br></pre></td></tr></table></figure></li><li><p>创建连接实例</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">private static DruidDataSource ds;</span><br><span class="line">   static &#123;</span><br><span class="line">       Properties properties = new Properties();</span><br><span class="line">       InputStream is = DbUtils.class.getResourceAsStream(&quot;/database.properties&quot;);</span><br><span class="line">       try &#123; </span><br><span class="line">           properties.load(is);</span><br><span class="line">           //根据配置文件的指定信息，创建一个指定连接池连接池</span><br><span class="line">           try &#123;</span><br><span class="line">               ds=(DruidDataSource)DruidDataSourceFactory.createDataSource(properties);</span><br><span class="line">           &#125; catch (Exception e) &#123;</span><br><span class="line">               e.printStackTrace();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125; catch (IOException e) &#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   public static Connection getConnection()&#123;</span><br><span class="line">       try &#123;</span><br><span class="line">           return ds.getConnection();</span><br><span class="line">       &#125; catch (SQLException e) &#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;</span><br><span class="line">       return null;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Druid连接池&quot;&gt;&lt;a href=&quot;#Druid连接池&quot; class=&quot;headerlink&quot; title=&quot;Druid连接池&quot;&gt;&lt;/a&gt;Druid连接池&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在程序初始化时，预先创建指定数量的数据库连接对象存储在池中。当需要连接数据</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>使用 Github Pages 和 Hexo 搭建自己的独立博客</title>
-    <link href="http://example.com/2021/09/29/%E4%BD%BF%E7%94%A8%20Github%20Pages%20%E5%92%8C%20Hexo%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://example.com/2021/09/29/%E4%BD%BF%E7%94%A8%20Github%20Pages%20%E5%92%8C%20Hexo%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/</id>
+    <link href="http://example.com/posts/531cd44d.html"/>
+    <id>http://example.com/posts/531cd44d.html</id>
     <published>2021-09-29T15:28:42.000Z</published>
     <updated>2023-04-08T07:52:24.126Z</updated>
     
