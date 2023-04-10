@@ -3,11 +3,11 @@
   <title>hopchen`博客</title>
   
   <subtitle>生活明朗，万物可爱</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://hopchen.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://hopchen.github.io/"/>
   <updated>2023-04-08T23:58:55.294Z</updated>
-  <id>http://example.com/</id>
+  <id>https://hopchen.github.io/</id>
   
   <author>
     <name>hopchen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/posts/4a17b156.html"/>
-    <id>http://example.com/posts/4a17b156.html</id>
+    <link href="https://hopchen.github.io/posts/4a17b156.html"/>
+    <id>https://hopchen.github.io/posts/4a17b156.html</id>
     <published>2023-04-08T05:54:07.147Z</published>
     <updated>2023-04-08T23:58:55.294Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Druid连接池</title>
-    <link href="http://example.com/posts/1fac5770.html"/>
-    <id>http://example.com/posts/1fac5770.html</id>
+    <link href="https://hopchen.github.io/posts/1fac5770.html"/>
+    <id>https://hopchen.github.io/posts/1fac5770.html</id>
     <published>2021-09-29T15:28:42.000Z</published>
     <updated>2023-04-08T23:58:55.293Z</updated>
     
@@ -59,8 +59,8 @@
   
   <entry>
     <title>使用 Github Pages 和 Hexo 搭建自己的独立博客</title>
-    <link href="http://example.com/posts/531cd44d.html"/>
-    <id>http://example.com/posts/531cd44d.html</id>
+    <link href="https://hopchen.github.io/posts/531cd44d.html"/>
+    <id>https://hopchen.github.io/posts/531cd44d.html</id>
     <published>2021-09-29T15:28:42.000Z</published>
     <updated>2023-04-08T23:58:55.295Z</updated>
     
